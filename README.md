@@ -6,7 +6,7 @@ A tiny Windows tray app that shows a clean on-screen popup at the top of the scr
 - Strike-through on the icon when the key turns off
 - Never takes focus; clicks pass through it
 - Sharp on high-DPI screens
-- Right-click the tray icon for "Start with Windows" and "Exit"
+- Starts with Windows by default (it has to be running to work); right-click the tray icon and untick "Start with Windows" to turn that off, or choose "Exit"
 
 ## Install
 
