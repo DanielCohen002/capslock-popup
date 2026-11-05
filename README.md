@@ -18,6 +18,8 @@ Download `CapsPopup.exe` from the [Releases](../../releases) page and run it. No
 C:\Windows\Microsoft.NET\Framework64\v4.0.30319\csc.exe -target:winexe -out:CapsPopup.exe -r:System.Windows.Forms.dll -r:System.Drawing.dll CapsPopup.cs
 ```
 
-## Notes
+## Turn off Logitech's popup first
 
-If another tool (for example Logitech Options+) already shows its own lock-key popup, turn that one off to avoid two popups.
+If you use a Logitech keyboard or mouse, **Logi Options+ has its own Caps Lock / Num Lock notification, and it has to be turned off** or you will see two popups (Logi's at the bottom of the screen, CapsPopup at the top). Logi has no setting to move its popup, only on/off.
+
+In Logi Options+, open your keyboard's settings and turn off the on-screen notification for Caps Lock and Num Lock. The same goes for any other tool that shows its own lock-key popup (for example ASUS or Dell utilities).
