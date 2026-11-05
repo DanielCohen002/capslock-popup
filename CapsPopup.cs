@@ -110,15 +110,10 @@ class Overlay : Form {
         bool created; var mx = new System.Threading.Mutex(true, "CapsPopupSingle", out created); if (!created) return;
         Application.EnableVisualStyles();
         var o = new Overlay(); o.CreateControl(); var h = o.Handle;
-        var tray = new NotifyIcon { Icon = SystemIcons.Information, Text = "Lock key popup", Visible = true };
-        var menu = new ContextMenu();
+        // No tray icon. Starts with Windows by default (set once on first run).
         var key = Registry.CurrentUser.OpenSubKey(@"Software\Microsoft\Windows\CurrentVersion\Run", true);
-        var cfg = Registry.CurrentUser.CreateSubKey(@"SoftwareCapsPopup");
+        var cfg = Registry.CurrentUser.CreateSubKey(@"Software\CapsPopup");
         if (cfg.GetValue("FirstRunDone") == null) { key.SetValue("CapsPopup", "\"" + Application.ExecutablePath + "\""); cfg.SetValue("FirstRunDone", 1); }
-        var auto = new MenuItem("Start with Windows") { Checked = key.GetValue("CapsPopup") != null };
-        auto.Click += (s, e) => { if (auto.Checked) key.DeleteValue("CapsPopup", false); else key.SetValue("CapsPopup", "\"" + Application.ExecutablePath + "\""); auto.Checked = !auto.Checked; };
-        menu.MenuItems.Add(auto); menu.MenuItems.Add("Exit", (s, e) => { tray.Visible = false; Application.Exit(); });
-        tray.ContextMenu = menu;
         Application.Run();
     }
 }

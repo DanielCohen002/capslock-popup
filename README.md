@@ -6,11 +6,13 @@ A tiny Windows tray app that shows a clean on-screen popup at the top of the scr
 - Strike-through on the icon when the key turns off
 - Never takes focus; clicks pass through it
 - Sharp on high-DPI screens
-- Starts with Windows by default (it has to be running to work); right-click the tray icon and untick "Start with Windows" to turn that off, or choose "Exit"
+- No tray icon, nothing in the taskbar. Starts with Windows by default (it has to be running to work)
 
 ## Install
 
-Download `CapsPopup.exe` from the [Releases](../../releases) page and run it. No installer, no dependencies (uses the .NET Framework that ships with Windows).
+Download `CapsPopup.exe` from the [Releases](../../releases) page and run it. It adds itself to Windows startup on first run. No installer, no dependencies (uses the .NET Framework that ships with Windows).
+
+There is no tray icon. To stop it, end `CapsPopup` in Task Manager. To stop it starting with Windows, turn it off in Task Manager > Startup apps (or Settings > Apps > Startup).
 
 ## Build
 
