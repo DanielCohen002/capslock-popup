@@ -1,6 +1,12 @@
-# CapsPopup
+<h1 align="center">CapsPopup</h1>
 
-A tiny Windows tray app that shows a clean on-screen popup at the top of the screen when you press Caps Lock, Num Lock or Scroll Lock.
+A tiny Windows app that shows a clean on-screen popup at the top of the screen when you press Caps Lock, Num Lock or Scroll Lock.
+
+### [Download the latest CapsPopup.exe](https://github.com/DanielCohen002/capslock-popup/releases/latest)
+
+Needs Windows with the .NET Framework that ships with it. No installer.
+
+What it does:
 
 - Light rounded card, top center, fades out after about a second
 - Strike-through on the icon when the key turns off
@@ -10,7 +16,7 @@ A tiny Windows tray app that shows a clean on-screen popup at the top of the scr
 
 ## Install
 
-Download `CapsPopup.exe` from the [Releases](../../releases) page and run it. It adds itself to Windows startup on first run. No installer, no dependencies (uses the .NET Framework that ships with Windows).
+Download `CapsPopup.exe` from the [Releases](../../releases/latest) page and run it. It adds itself to Windows startup on first run. No installer, no dependencies (uses the .NET Framework that ships with Windows).
 
 There is no tray icon. To stop it, end `CapsPopup` in Task Manager. To stop it starting with Windows, turn it off in Task Manager > Startup apps (or Settings > Apps > Startup).
 
